@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Twitter</title>
+	<style>
+		.site{
+			height: 97.7vh; width: 1300px; margin-left: auto; margin-right: auto;  justify-content: space-between; display: flex; 
+		}
+		.menu{
+			background-color: white; width: 250px; height: 97.7vh; display: flex; flex-direction: column;
+		}
+		.birdbox{
+    		background-color: white; width: 250px; height: 80px; align-content: center;
+		}
+		.birdlogo{
+			background-color: white; width: 45px; height: 35px; margin-left: 15px; display: flex;
+			background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png);
+			background-size: 100% 100%;
+		}
+		.mainlink{
+			background-color: white; width: 250px; height: 80px;align-items: center; display: flex; 
+		}
+		.domikimg{
+			background-color: white; width: 50px; height: 50px;  margin-left: 10px; display: flex;
+			background-image: url(domik.png);
+			background-size: 100% 100%;
+		}
+		.maintext{
+			text-decoration: none; font-family:Arial, sans-serif; padding-left: 15px; color: #00acee; font-size: 25px; font-weight: bolder; 
+			margin-top: 5px; 
+		}
+		.search{
+			background-color:white; width: 250px; height: 80px; align-items: center; display: flex;
+		}
+		.poiskimg{
+			background-color: white; width: 35px; height: 35px; margin-left: 15px; display: flex;
+			background-image: url(https://cdn-icons-png.flaticon.com/512/117/117848.png);
+			background-size: 100% 100%;
+		}
+		.poisktext{
+			text-decoration: none; font-family:Arial, sans-serif; padding-left: 25px; color: black; font-size: 25px; font-weight: bolder; 
+			margin-top: 5px;
+		}
+		.notif{
+			background-color:white; width: 250px; height: 80px; align-items: center; display: flex;
+		}
+		.notifimg{
+			background-color: white; width: 40px; height: 40px; margin-left: 15px; display: flex;
+			background-image: url(https://cdn-icons-png.flaticon.com/512/3602/3602328.png);
+			background-size: 100% 100%;
+		}
+		.notiftext{
+			text-decoration: none; font-family:Arial, sans-serif; padding-left: 20px; color: black; font-size: 25px; font-weight: bolder; 
+			margin-top: 5px;
+		}
+		.messages{
+			background-color:white; width: 250px; height: 80px; align-items: center; display: flex;
+		}
+		.messagesimg{
+			background-color: white; width: 45px; height: 45px; margin-left: 12px; display: flex;
+			background-image: url(https://cdn-icons-png.flaticon.com/512/5757/5757765.png);
+			background-size: 100% 100%;
+		}
+		.messagestext{
+			text-decoration: none; font-family:Arial, sans-serif; padding-left: 15px; color: black; font-size: 24px; font-weight: bolder; 
+			margin-top: 5px;
+		}
+		.marks{
+			background-color:white; width: 250px; height: 80px; align-items: center; display: flex;
+		}
+		.marksimg{
+			background-color: white; width: 55px; height: 45px; margin-left: 7px; display: flex;
+			background-image: url(https://cdn.icon-icons.com/icons2/1875/PNG/512/bookmark_120208.png);
+			background-size: 100% 100%;
+		}
+		.markstext{
+			text-decoration: none; font-family:Arial, sans-serif; padding-left: 13px; color: black; font-size: 25px; font-weight: bolder; 
+			margin-top: 5px;
+		}
+		.listlink{
+			background-color:white; width: 250px; height: 80px; align-items: center; display: flex;
+		}
+		.listlinkimg{		
+			background-color: white; width: 40px; height: 40px; margin-left: 15px; display: flex;
+			background-image: url(https://cdn.icon-icons.com/icons2/1129/PNG/512/fileinterfacesymboloftextpapersheet_79740.png);
+			background-size: 100% 100%;
+		}
+		.listlinktext{
+			text-decoration: none; font-family:Arial, sans-serif; padding-left: 20px; color: black; font-size: 25px; font-weight: bolder; 
+			margin-top: 5px;
+		}
+		.myprofile{
+			background-color: white; width: 250px; height: 80px; align-items: center; display: flex;
+		}
+		.myprofileimg{	
+			background-color: white; width: 40px; height: 40px; margin-left: 15px; display: flex; border-radius: 60px;
+			background-image: url(https://wide-w.com/wp-content/uploads/2021/09/30.jpg);
+			background-size: 100% 100%;
+		}
+		.myprofiletext{
+			text-decoration: none; font-family:Arial, sans-serif; padding-left: 20px; color: black; font-size: 25px; font-weight: bolder; 
+			margin-top: 5px;
+		}
+		.more{
+			background-color:white; width: 250px; height: 80px; align-items: center; display: flex;
+		}
+		.moreimg{		
+			background-color: white; width: 45px; height: 45px; margin-left: 12px; display: flex; border-radius: 60px;
+			background-image: url(https://mywebicons.ru/i/png/67dbf57e694847bab65b495e710b48a7.png);
+			background-size: 100% 100%;
+		}
+		.moretext{
+			text-decoration: none; font-family:Arial, sans-serif; padding-left: 20px; color: black; font-size: 25px; font-weight: bolder; 
+			margin-top: 5px;
+		}
+		.buttonname{
+			background-color: white; width: 250px; height: 80px; margin-top: 40px; align-items: center; display: flex;
+		}
+		.twitbutton{
+			background-color: #00acee; width: 250px; height: 50px; border-radius: 50px; border: none;
+			text-decoration: none; font-family:Arial, sans-serif;  color: white; font-size: 20px; font-weight: bolder;
+			padding-left: 75px; padding-top: 25px;
+		}
+		.wall{
+			background-color: gainsboro; width: 600px; height: 97.7vh; display: flex; flex-direction: column;
+		}
+		.main{
+			background-color: white; width: 595px; height: 60px;  border: gainsboro; border-style: solid;
+		}
+		.textmain{
+			font-family: Arial, sans-serif; font-size: 25px; margin-top: 10px; margin-left: 15px; font-weight:800; 
+		}
+		.myminds{
+			background-color: white; width: 600px; height: 150px; display: flex; flex-wrap: wrap;
+		}
+		.photoprof{
+			background-color: black; width: 50px; height: 50px; border-radius: 50%; margin-top: 15px; margin-left: 15px;
+			background-image: url(https://wide-w.com/wp-content/uploads/2021/09/30.jpg); 
+			background-size: 100% 100%;
+		}
+		.mymindstext{
+			height: 60px; width: 510px; margin-top: 15px; margin-left: 10px; outline: none; border: none; font-size: 25px;
+		}
+		.buttonsfigure{
+			background-color: white; height: 50px; width: 545px; margin-left: 74px; display: flex; justify-content: flex-end; gap: 135px
+		}
+		.buttonsgroup1{
+			background-color: white; display: flex; height: 50px; width: 180px;  align-items: center; gap: 10px;
+		}
+		.button1{
+			width: 35px; height: 35px;
+			background-image: url(imgicon.png); background-size: 100% 100%;
+		}
+		.button2{
+			width: 35px; height: 35px;
+			background-image: url(gificon.png); background-size: 100% 100%;
+		}
+		.button3{
+			width: 35px; height: 35px;
+			background-image:url(voteicon.png); background-size: 100% 100%;
+		}
+		.button4{
+			width: 35px; height: 35px;
+			background-image: url(emojicon.png); background-size: 100% 100%;
+		}
+		.buttonsgroup2{
+			height: 50px; width: 210px;  display: flex; align-items: center; gap: 10px;
+		}
+		.button5{
+			height: 30px; width: 30px;
+			background-image: url(circleicon.png); background-size: 100% 100%;
+		}
+		.button6{
+			height: 40px; width: 40px;
+			background-image: url(plusicon.png); background-size: 100% 100%;
+		}
+		.button7{
+			background-color: #00acee; height: 35px; width: 100px; border-radius: 50px;
+			text-decoration: none; color: white; font-family: Arial, Helvetica, sans-serif; font-weight: bolder; padding-top: 15px; padding-left: 20px;
+		}
+		.post1{
+			background-color: white; width: 600px; height: 275px; margin-top: 15px; display: flex; flex-wrap: wrap;
+		}
+		.profileimgpost1{
+			background-color: black; width: 60px; height: 60px;border-radius: 50%; margin-top: 10px ;margin-left: 20px;
+			background-image: url(https://images.thevoicemag.ru/upload/img_cache/e09/e099527ced485e48739bd1aa257e3fe0_cropped_640x640.jpg);
+			background-size: 100% 100%;
+		}
+		.blockpost{
+			height: 275px; width: 500px;; 
+			margin-left: 90px;  margin-top: -70px;
+		}
+		.namesblock{
+			 width: 275px; height: 25px; align-self: flex-start; display: flex;
+		}
+		.nameauthor{
+			 width:110px; height: 25px; 
+			text-decoration: none; color: black; font-weight: bolder; font-family: Arial, sans-serif; font-size: large; margin-top: 1px;
+		}
+		.tagauthor{
+			width:115px; height: 23px; 
+			color: gray; text-decoration: none; font-family: Arial,  sans-serif; font-size: 15px; padding-top: 2px; padding-left: 10px;
+		}
+		.timepost{
+			width: 50px; height: 25px; font-size: 19px; color: gray; font-family: sans-serif 
+		}
+		.textpost1{
+			width: 500px; height:75px; font-family: Arial, sans-serif; font-size: 20px;
+		}
+		.postimage{
+			width: 500px; height: 120px;  border-radius: 15px; align-self: flex-end; margin-bottom: 35px; display: flex; flex-flow: row-reverse;
+		}
+		.postpicture1{
+			width: 130px; height: 120px; border-radius: 15px 0 0 15px; border: 1px; border-style: solid; border-color: gray;
+			background-image: url(https://yt3.googleusercontent.com/ytc/AIdro_ncwKEydPpLhGS1g6S9FpvoH37zX-cOrt8YVuUWInV08IY=s900-c-k-c0x00ffffff-no-rj);
+			background-size: 100% 100%;
+		}
+		.textinpost1{
+			width: 370px; height: 120px; border-radius: 0 15px 15px 0; border: 1px; border-style: solid; border-color: gray; text-align: center;
+			text-decoration: none;
+		}
+		.textinpost111{
+			color: black; font-family: Arial, Helvetica, sans-serif; font-weight: 600;
+		}
+		.reactionsblock{
+			width: 420px; height: 35px; margin-top: -25px; display: flex; 
+		}
+		.messagesreact{
+			width: 95px; height: 35px; display: flex;
+		}
+		.messagesicon{
+			width: 40px; height: 30px;
+			background-image: url(messageicon.png); background-size: 100% 100%; 
+		}
+		.countmessages{
+			 width: 85px; height: 32px; align-content: center; text-align: center; 
+		}
+		.messagesnumber{
+			text-decoration: none; color: black; font-family: Arial,  sans-serif; padding-top: 2px; font-weight: bold;
+		}
+		.repostreact{
+			width: 90px; height: 35px; margin-left: 15px; display: flex;
+		}
+		.repostimg{
+			width: 35px; height: 30px;
+			background-image: url(reposticon.png); background-size: 100% 100%;
+		}
+		.countrepost{
+			width: 50px; height: 30px; align-content: center; text-align: center; 
+		}
+		.repostnumber{
+			text-decoration: none; color: black; font-family: Arial,  sans-serif; padding-top: 2px; font-weight: bold;
+		}
+		.likesreact{
+			width: 90px; height: 35px; margin-left: 20px; display: flex;
+		}
+		.likesimg{
+			 width: 30px; height: 30px;
+			background-image: url(likesicon.png); background-size: 100% 100%;
+		}
+		.countlikes{
+			 width: 60px; height: 32px; align-content: center; text-align: center;
+		}
+		.likesnumber{
+			text-decoration: none; color: black; font-family: Arial,  sans-serif; padding-top: 2px; font-weight: bold;
+		}
+		.uploadreact{
+			width: 30px; height: 30px; margin-left: 40px;
+			background-image: url(uploadicon.png); background-size: 100% 100%;
+		}
+		.post2{
+		 	background-color: white; width: 600px; height: 430px; margin-top: 5px; display: flex; flex-wrap: wrap;
+		}
+		.profileimgpost2{
+			width: 60px; height: 60px;border-radius: 50%; margin-top: 10px ;margin-left: 20px;
+			background-image: url(https://ogeo.info/wp-content/uploads/2024/04/flag-prokommunisticheskogo-pravitelstva-respubliki-yuzhnyy-vetnam-1969-1976-foto.png);
+			background-size: 100% 100%;
+		}
+		.blockpost2{
+			width: 500px; height: 445px; margin-left: 90px; margin-top: -60px;
+		}
+		.namesblock2{
+			 width: 275px; height: 25px; align-self: flex-start; display: flex;
+		}
+		.nameauthor2{
+			width:110px; height: 25px; 
+			text-decoration: none; color: black; font-weight: bolder; font-family: Arial, sans-serif; font-size: large;
+		}
+		.tagauthor2{
+			width:115px; height: 23px; 
+			color: gray; text-decoration: none; font-family: Arial,  sans-serif; font-size: 15px; padding-top: 2px; 
+		}
+		.timepost2{
+			width: 50px; height: 25px; font-size: 19px; color: gray; font-family: sans-serif; margin-right: 5px;
+		}
+		.textpost2{
+			width: 500px; height:75px; font-family: Arial, sans-serif; font-size: 20px;
+		}
+		.postimage2{
+			 width: 500px; height: 295px; border-radius: 15px; display: flex; flex-direction: column;
+		}
+		.postpicture2{
+			width: 500px; height: 215px; border-radius:  15px 15px 0 0;  border: 1px; border-style: solid; border-color: gray;
+			background-image: url(https://topwar.ru/uploads/posts/2021-07/1627260690_forrestgump.jpg);
+			background-size: 100% 100%;
+		}
+		.textinpost2{
+			width: 500px; height: 80px; border-radius: 0 0 15px 15px; border: 1px; border-style: solid; border-color: gray; text-decoration: none;
+		}
+		.textinpost222{
+			color: black; font-family: Arial, Helvetica, sans-serif; font-weight: 600; margin-top: -1px; margin-left: 5px;
+		}
+		.reactionsblock2{
+			width: 420px; height: 35px; display: flex; margin-top: 5px; 
+		}
+		.messagesreact2{
+			width: 95px; height: 35px; display: flex;
+		}
+		.messagesicon2{
+			width: 45px; height: 30px;
+			background-image: url(messageicon.png); background-size: 100% 100%; 
+		}
+		.countmessages2{
+			width: 85px; height: 32px; align-content: center; 
+			text-align: center; text-decoration: none; font-family: Arial, Helvetica, sans-serif; color: black; font-weight: bold;
+		}
+		.messagesnumber2{
+			text-decoration: none; color: black; font-family: Arial,  sans-serif; padding-top: 2px; font-weight: bold;
+		}
+		.repostreact2{
+			width: 90px; height: 35px; margin-left: 15px; display: flex;
+		}
+		.repostimg2{
+			width: 35px; height: 30px;
+			background-image: url(reposticon.png); background-size: 100% 100%;
+		}
+		.countrepost2{
+			width: 50px; height: 30px; align-content: center; text-align: center; 
+			text-decoration: none; font-family: Arial, Helvetica, sans-serif; color: black; font-weight: bold;
+		}
+		.repostnumber2{
+			 text-decoration: none; color: black; font-family: Arial,  sans-serif; padding-top: 2px; font-weight: bold;
+		}
+		.likesreact2{
+			width: 90px; height: 35px; margin-left: 20px; display: flex;
+		}
+		.likesimg2{
+			width: 30px; height: 30px;
+			background-image: url(likesicon.png); background-size: 100% 100%;
+		}
+		.countlikes2{
+			 width: 60px; height: 32px; align-content: center; text-align: center;
+			 text-decoration: none; font-family: Arial, Helvetica, sans-serif; color: black; font-weight: bold;
+		}
+		.likesnumber2{
+			text-decoration: none; color: black; font-family: Arial,  sans-serif; padding-top: 2px; font-weight: bold;
+		}
+		.uploadreact2{
+			width: 30px; height: 30px; margin-left: 40px;
+			background-image: url(uploadicon.png); background-size: 100% 100%;
+		}
+		.recomendations{
+			width: 340px; height: 97.7vh; display: flex; flex-direction: column; 
+		}
+		.searchin{
+			width: 340px; height: 50px; display: flex;
+		}
+		.searchdiv{
+			background-color: gainsboro; width: 340px; height: 45px; border-radius: 50px; display: flex; align-items: center;
+		}
+		.lupa{
+			height: 30px; width: 30px; margin-left: 15px;
+			background-image: url(lupaicon.png); background-size: 100% 100%;
+		}
+		.scrtwit{
+			background-color: gainsboro; width: 270px; height: 30px; border: none; outline: none; font-size: 20px;
+		}
+		.actual{
+			background-color:whitesmoke; width: 340px; height: 320px; margin-top: 20px; border-radius: 20px; display: flex; flex-direction: column;
+		}
+		.actualforyou{
+			width: 332px; height: 53.33333333333px; border-radius: 20px 20px 0 0; display: flex; align-items: center; padding-left: 8px; font-size: 17.5px;
+			font-family: Arial, Helvetica, sans-serif; font-weight: 1000;  justify-content: center;
+			border-style: solid; border-color: gainsboro; border-top: none; border-left: none; border-right: none; border-width: 2px; 
+		}
+		.settingsactual{
+			width: 30px; height: 30px; margin-left: 10px;
+			background-image: url(settingsicon.png); background-size: 100% 100%;
+		}
+		.teg1{
+			width: 310px; height: 53.33333333333px; display: flex; align-items: center;
+			font-family: Arial, Helvetica, sans-serif; font-weight: 800;  justify-content: flex-start; padding-left: 30px;
+			text-decoration: none; color: black;
+			border-style: solid; border-color: gainsboro; border-top: none; border-left: none; border-right: none; border-width: 2px;
+		}
+		.teg2{
+			width: 310px; height: 53.3333333333px; display: flex; align-items: center;
+			font-family: Arial, Helvetica, sans-serif; font-weight: 800;  justify-content: flex-start; padding-left: 30px;
+			text-decoration: none; color: black;
+			border-style: solid; border-color: gainsboro; border-top: none; border-left: none; border-right: none; border-width: 2px;
+		}
+		.teg3{
+			width: 310px; height: 53.333333333px; display: flex; align-items: center;
+			font-family: Arial, Helvetica, sans-serif; font-weight: 800;  justify-content: flex-start; padding-left: 30px;
+			text-decoration: none; color: black;
+			border-style: solid; border-color: gainsboro; border-top: none; border-left: none; border-right: none; border-width: 2px;
+		}
+		.teg4{
+			width: 310px; height: 53.333333333333px; display: flex; align-items: center;
+			font-family: Arial, Helvetica, sans-serif; font-weight: 800;  justify-content: flex-start; padding-left: 30px;
+			text-decoration: none; color: black;
+			border-style: solid; border-color: gainsboro; border-top: none; border-left: none; border-right: none; border-width: 2px;
+		}
+		.teg5{
+			width: 310px; height: 53.333333333333px; border-radius: 0 0 20px 20px; display: flex; align-items: center;
+			font-family: Arial, Helvetica, sans-serif; justify-content: flex-start; padding-left: 30px;
+			text-decoration: none; color: #00acee; 
+			border-style: solid; border-color: gainsboro; border-top: none; border-left: none; border-right: none; border-width: 2px;
+		}
+		.whoread{
+			background-color:whitesmoke; width: 340px; height: 300px; margin-top: 20px; border-radius: 20px; display: flex; flex-direction: column;
+		}
+		.whoreadforyou{
+			width: 320px; height: 50px; border-radius: 15px 15px 0 0; display: flex; align-items: center; font-size: 19px;
+			color: black; font-family: Arial, Helvetica, sans-serif; font-weight: 900;  justify-content: flex-start; padding-left: 20px;
+			border-style: solid; border-color: gainsboro; border-top: none; border-left: none; border-right: none; border-width: 2px;
+		}
+		.recomend1{
+			width: 340px; height: 70px; display: flex; align-items: center;
+			border-style: solid; border-color: gainsboro; border-top: none; border-left: none; border-right: none; border-width: 2px;
+		}
+		.blockelon{
+			width: 160px; height: 50px; display: flex; margin-left: 20px; flex-wrap:wrap
+		}
+		.recomendphoto1{
+			background-color: black; width: 45px; height: 45px; border-radius: 50%;
+			background-image: url(https://pbs.twimg.com/profile_images/1780044485541699584/p78MCn3B_400x400.jpg);
+			background-size: 100% 100%;
+		}
+		.elonmuskname{
+			text-decoration: none; color: black; font-family: Arial, Helvetica, sans-serif; font-weight: bolder; margin-left: 5px;
+		}
+		.elonmusktag{
+			text-decoration: none; margin-left: 50px; margin-top: -30px; color: gray; font-family: Arial, Helvetica, sans-serif;
+		}
+		.certificon{
+			width: 20px; height: 20px; margin-top: -50px;
+			background-image: url(https://digiseller.ru/preview/218823/p1_3566470_5f011edc.png);
+			background-size: 100% 100%;
+		}
+		.buttonread1{
+			width: 72.5px; height: 27px; margin-left: 30px; margin-top: -10px; border-radius: 50px;
+			border-color:#00acee; border-style: solid; border-width: 2px; 
+			font-family: Arial, Helvetica, sans-serif; text-decoration: none; padding-left: 17.5px; padding-top: 5px; color: #00acee; font-weight: bold;
+		}
+		.recomend2{
+			width: 340px; height: 70px; display: flex; align-items: center;
+			border-style: solid; border-color: gainsboro; border-top: none; border-left: none; border-right: none; border-width: 2px;
+		}
+		.blockrecomend2{
+			width: 180px; height: 50px; display: flex; margin-left: 20px;
+		}
+		.recomendblock1{
+			width: 45px; height: 50px; display: flex;
+		}
+		.recomendphoto2{
+			background-color: black; width: 45px; height: 45px; border-radius: 50%;
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRoFyGFJeJW3PpYvTjdwNTbYuLzNA2c4Bo2g&s);
+			background-size: 100% 100%;
+		}
+		.recomendblock2{
+			width: 135px; height: 50px; display: flex; flex-direction: column;
+		}
+		.recomendname2{
+			width: 120px; height: 18px; margin-left: 5px; display: flex;
+			text-decoration: none; color: black; font-family: Arial, Helvetica, sans-serif; font-weight: bolder; margin-left: 5px;
+		}
+		.recomendtag2{
+			width: 100px; height: 18px; margin-left: 5px;
+			color: gray; font-family: Arial, Helvetica, sans-serif; text-decoration: none;
+		}
+		.certificon2{
+			width: 20px; height: 18px; display: flex; margin-left: 5px;
+			background-image: url(https://digiseller.ru/preview/218823/p1_3566470_5f011edc.png);
+			background-size: 100% 100%;
+		}
+		.buttonread2{
+			width: 72.5px; height: 27px; margin-left: 10px; margin-top: -10px; border-radius: 50px;
+			border-color:#00acee; border-style: solid; border-width: 2px; 
+			font-family: Arial, Helvetica, sans-serif; text-decoration: none; padding-left: 17.5px; padding-top: 5px; color: #00acee; font-weight: bold;
+		}
+		.recomend3{
+			width: 340px; height: 65px; display: flex; align-items: center;
+			border-style: solid; border-color: gainsboro; border-top: none; border-left: none; border-right: none; border-width: 2px;
+		}
+		.blockrecomend3{
+			width: 180px; height: 50px; display: flex; margin-left: 20px;
+		}
+		.recomendblock3{
+			width: 45px; height: 50px; display: flex;
+		}
+		.recomendphoto3{
+			width: 45px; height: 45px; border-radius: 50%;
+			background-image: url(https://static-00.iconduck.com/assets.00/turtle-emoji-2048x1634-f09f55hs.png);
+			background-size: 100% 100%;
+		}
+		.recomendblock4{
+			width: 135px; height: 50px; display: flex; flex-direction: column;
+		}
+		.recomendname3{
+			width: 60px; height: 18px; margin-left: 5px; display: flex;
+			text-decoration: none; color: black; font-family: Arial, Helvetica, sans-serif; font-weight: bolder; margin-left: 5px;
+		}
+		.certificon3{
+			width: 20px; height: 20px; margin-left: 5px;
+			background-image: url(https://digiseller.ru/preview/218823/p1_3566470_5f011edc.png);
+			background-size: 100% 100%;
+		}
+		.recomendtag3{
+			width: 100px; height: 18px; margin-left: 5px;
+			color: gray; font-family: Arial, Helvetica, sans-serif; text-decoration: none;
+		}
+		.buttonread3{
+			width: 72.5px; height: 27px; margin-left: 10px; margin-top: -10px; border-radius: 50px;
+			border-color:#00acee; border-style: solid; border-width: 2px; 
+			font-family: Arial, Helvetica, sans-serif; text-decoration: none; padding-left: 17.5px; padding-top: 5px; color: #00acee; font-weight: bold;
+		}
+		.sawmore{
+			width: 310px; height: 40px; border-radius: 0 0 20px 20px; display: flex; align-items: center;
+			font-family: Arial, Helvetica, sans-serif; justify-content: flex-start; padding-left: 30px;
+			text-decoration: none; color: #00acee; 
+			border-style: solid; border-color: gainsboro; border-top: none; border-left: none; border-right: none; border-width: 2px;
+		}
+		.titles{
+			width: 340px; height: 100px; margin-top: 40px; display: flex; flex-wrap: wrap;
+		}
+		.conditions{
+			 width: 80px; height: 20px; margin-left: 20px; font-size: 15px;
+			color: #4D4D4D; font-family: Arial, Helvetica, sans-serif; text-decoration: none;
+		}
+		.politics{
+			width: 230px; height: 20px; margin-left: 10px;font-size: 15px;
+			color: #4D4D4D; font-family: Arial, Helvetica, sans-serif; text-decoration: none;
+		}
+		.cookie{
+			width: 95px; height: 20px; margin-left: 20px; margin-top: -10px;
+			color: #4D4D4D; font-family: Arial, Helvetica, sans-serif; text-decoration: none; font-size: 15px;
+		}
+		.adinformation{
+			width: 180px; height: 20px; margin-top: -10px; margin-left: 15px;
+			color: #4D4D4D; font-family: Arial, Helvetica, sans-serif; text-decoration: none; font-size: 15px;
+		}
+		.twitterinc{
+			width: 170px; height: 20px; margin-top: -10px; margin-left: 20px;
+			color: #4D4D4D; font-family: Arial, Helvetica, sans-serif; text-decoration: none; font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="site">
+		<div class="menu">
+			<div class="birdbox">
+				<a href="" class="birdlogo"></a>
+			</div>
+			<div class="mainlink">
+				<a href="" class="domikimg"></a>
+				<a href="" class="maintext">Главная</a>
+			</div>
+			<div class="search">
+				<a href="" class="poiskimg"></a>
+				<a href="" class="poisktext">Поиск</a>
+			</div>
+			<div class="notif">
+				<a href="" class="notifimg"></a>
+				<a href="" class="notiftext">Уведомления</a>
+			</div>
+			<div class="messages">
+				<a href="" class="messagesimg"></a>
+				<a href="" class="messagestext">Сообщения</a>
+			</div>
+			<div class="marks">
+				<a href="" class="marksimg"></a>
+				<a href="" class="markstext">Закладки</a>
+			</div>
+			<div class="listlink">
+				<a href="" class="listlinkimg"></a>
+				<a href="" class="listlinktext">Списки</a>
+			</div>
+			<div class="myprofile">
+				<a href="" class="myprofileimg"></a>
+				<a href="" class="myprofiletext">Профиль</a>
+			</div>
+			<div class="more">
+				<a href="" class="moreimg"></a>
+				<a href="" class="moretext">Ещё</a>
+			</div>
+			<div class="buttonname">
+				<a href="" class="twitbutton">Твитнуть</a>
+			</div>
+		</div>
+		<div class="wall">
+			<div class="main">
+				<h1 class="textmain">Главная</h1>
+			</div>
+			<div class="myminds">
+				<div class="photoprof"></div>
+				<input type="text" placeholder="Что происходит?" class="mymindstext">
+				<div class="buttonsfigure">
+					<div class="buttonsgroup1"> 
+						<a href="" class="button1"></a>
+						<a href="" class="button2"></a>
+						<a href="" class="button3"></a>
+						<a href="" class="button4"></a>
+					</div>
+					<div class="buttonsgroup2">
+						<a href="" class="button5"></a>
+						<a href="" class="button6"></a>
+						<a href="" class="button7">Твитнуть</a>
+					</div>
+					
+				</div>
+				
+			</div>
+			<div class="post1">
+				
+				
+				<a href="" class="profileimgpost1"></a>
+				<div class="blockpost">
+					<div class="namesblock">
+						<a href="" class="nameauthor">НовостиГРУ</a>
+						<a href="" class="tagauthor">@gamesnews</a>
+						<div class="timepost"> · 2 ч</div>
+					</div>
+					<div class="textpost1">
+						Пчелиная война 2 скорее всего выйдет только тогда, когда, Булджать переборит страх 808 пчёл. Известия о Табаке 2 от Мудреныча пока неизвестны
+					</div>
+					<div class="postimage">
+						<a href="" class="textinpost1">
+							<p class="textinpost111">Пчелиная война 2 от Булджатя ждут уже очень долгое время и к сожалению нет никаких зацепок. Мудреныч же в интервью рассказал что о Табаке 2 очень мало информации</p> 
+						</a>
+						<a href="" class="postpicture1"></a>
+					</div>
+					<div class="reactionsblock">
+						<div class="messagesreact">
+							<a href="" class="messagesicon"></a>
+							<div class="countmessages">
+								<a href="" class="messagesnumber">14 тыс.</a>
+							</div> 
+							
+						</div>
+						<div class="repostreact">
+							<a href="" class="repostimg"></a>
+							<div class="countrepost">
+								<a href="" class="repostnumber">6 тыс.</a>
+							</div>	
+						</div>
+						<div class="likesreact">
+							<a href="" class="likesimg"></a>
+							<div class="countlikes">
+								<a href="" class="likesnumber">69 тыс.</a>	
+							</div>							
+						</div>
+						<a href="" class="uploadreact"></a>
+					</div>
+					
+				</div>
+				
+			</div>
+			<div class="post2">
+				<a href="" class="profileimgpost2"></a>
+				<div class="blockpost2">
+					<div class="namesblock2">
+						<a href="" class="nameauthor2">ПогодаКГБ</a>
+						<a href="" class="tagauthor2">@kgbweather</a>
+						<div class="timepost2">· 1 ч </div>
+					</div>
+					<div class="textpost2">
+						Во Вьетнаме мы познали все виды дождя: прямой дождь, косой дождь, горизонтальный дождь и даже дождь, который идет снизу вверх...
+					</div>
+					<div class="postimage2">
+						<a href="" class="postpicture2"></a>
+						<a href="" class="textinpost2">
+							<p class="textinpost222">Прогноз погоды во Вьетнаме стоит узнать заранее, чтобы спланировать комфортный отпуск. Чтобы иметь представление, какая погода во Вьетнаме сейчас, ознакомьтесь с таблицей погоды во Вьетнаме по месяцам.</p>
+						</a>
+						
+					</div>
+					<div class="reactionsblock2">
+						<div class="messagesreact2">
+							<a href="" class="messagesicon2"></a>
+							<a href="" class="countmessages2">11 тыс.</a>
+						</div>
+						<div class="repostreact2">
+							<a href="" class="repostimg2"></a>
+							<a href="" class="countrepost2">1 тыс.</a>
+						</div>
+						<div class="likesreact2">
+							<a href="" class="likesimg2"></a>
+							<a href="" class="countlikes2">33 тыс.</a>
+						</div>
+						<a href="" class="uploadreact2"></a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="recomendations">
+			<div class="searchin">
+				<div class="searchdiv">
+					<div class="lupa"></div>
+					<input type="text" placeholder="Поиск в Твиттере" class="scrtwit">
+				</div>
+			</div>
+			<div class="actual">
+				<div class="actualforyou">Актуальные темы для вас
+					<a href="" class="settingsactual"></a>
+				</div>
+				<a href="" class="teg1">петербург</a>
+				<a href="" class="teg2">#медведь</a>
+				<a href="" class="teg3">#ГОООООООООЛ</a>
+				<a href="" class="teg4">гойдастан</a>
+				<a href="" class="teg5">Показать ещё</a>
+			</div>
+			<div class="whoread">
+				<div class="whoreadforyou">Кого читать</div>
+				<div class="recomend1">
+					<div class="blockelon">						
+						<a href="" class="recomendphoto1"></a>
+						<a href="" class="elonmuskname">Elon Musk</a>
+						<a href="" class="elonmusktag">@elonmusk</a>
+						<a href="" class="certificon"></a>
+					</div>
+					<a href="" class="buttonread1">Читать</a>
+				</div>
+				<div class="recomend2">
+					<div class="blockrecomend2">
+						<div class="recomendblock1">
+							<a href="" class="recomendphoto2"></a>
+						</div>
+						<div class="recomendblock2">
+						<a href="" class="recomendname2">Сол Гудман
+							<div href="" class="certificon2"></div>
+							</a>
+						<a href="" class="recomendtag2">@saulgoodman</a>
+						
+						</div>
+						
+					</div>
+					<a href="" class="buttonread2">Читать</a>
+				</div>
+				<div class="recomend3">
+					<div class="blockrecomend3">
+						<div class="recomendblock3">
+							<a href="" class="recomendphoto3"></a>
+						</div>
+						<div class="recomendblock4">
+						<a href="" class="recomendname3">Carl
+							<div href="" class="certificon3"></div>
+						</a>
+						<a href="" class="recomendtag3">@turtlecarl</a>
+						</div>
+
+					</div>
+					<a href="" class="buttonread3">Читать</a>
+				</div>
+				<a href="" class="sawmore">Показать ещё</a>		
+			</div>
+			
+			<div class="titles">
+				<a href="" class="conditions">Условия</a>
+				<a href="" class="politics">Политика конфиденциальности</a>
+				<a href="" class="cookie">Файлы cookie</a>
+				<a href="" class="adinformation">Информация о рекламе</a>
+				<a href="" class="twitterinc">Twitter, Inc., 2019</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
